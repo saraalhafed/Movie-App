@@ -15,6 +15,6 @@ export default {
     },
   },
   plugins: [],
-  darkMode: 'class',
+  darkMode: 'class',/* selector,media : to toggle between 2 differant style here in our App we need to toggle between dark and light mode (bg,textcolor)it can be any thing*/
 }
 
