@@ -34,12 +34,13 @@ try{
     setLoading(false)
 };}
 
-const getMovieDetails= async (url)=>{
+const getMovieDetails= async (id)=>{
 // Movie Details including the movie videos
-const movieDetailsUrl = `${BASE_URL}/movie/${movieId}?api_key=${API_KEY}&append_to_response=videos`;
+const movieDetailsUrl = `${BASE_URL}/movie/${id}?api_key=${API_KEY}&append_to_response=video&api_key=35c2fdc6d4e6902d61441ee05a0f77e8`;
     try{
         const {data:dataDetails}=await axios.get(movieDetailsUrl);
-        return{dataDetails,video:dataDetails.videos.results[0].key}
+        return{dataDetails,video:dataDetails.videos.results[0].key}/* i check the data : from postmann , i past the  videoUrl in post mann 
+        array has alot videos i need just one video with his key, for example the first video */
     }catch(error){
         console.log(error)
     }
